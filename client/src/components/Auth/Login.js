@@ -1,5 +1,5 @@
-import React from "react";
-import { withStyles } from "@material-ui/core/styles";
+import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
 // import Typography from "@material-ui/core/Typography";
 
 const Login = ({ classes }) => {
@@ -8,11 +8,11 @@ const Login = ({ classes }) => {
 
 const styles = {
   root: {
-    height: "100vh",
-    display: "flex",
-    justifyContent: "center",
-    flexDirection: "column",
-    alignItems: "center"
+    height: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    alignItems: 'center'
   }
 };
 

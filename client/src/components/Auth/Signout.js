@@ -1,5 +1,5 @@
-import React from "react";
-import { withStyles } from "@material-ui/core/styles";
+import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
 // import ExitToApp from "@material-ui/icons/ExitToApp";
 // import Typography from "@material-ui/core/Typography";
 
@@ -9,15 +9,15 @@ const Signout = ({ classes }) => {
 
 const styles = {
   root: {
-    cursor: "pointer",
-    display: "flex"
+    cursor: 'pointer',
+    display: 'flex'
   },
   buttonText: {
-    color: "orange"
+    color: 'orange'
   },
   buttonIcon: {
-    marginLeft: "5px",
-    color: "orange"
+    marginLeft: '5px',
+    color: 'orange'
   }
 };
 
