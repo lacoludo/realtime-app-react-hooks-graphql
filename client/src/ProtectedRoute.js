@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import React, { useContext } from 'react'
+import { Route, Redirect } from 'react-router-dom'
 
-import Context from './context';
+import Context from './context'
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
-  const { state } = useContext(Context);
+  const { state } = useContext(Context)
   return (
     <Route
       render={props =>
@@ -12,7 +12,7 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
       }
       {...rest}
     />
-  );
-};
+  )
+}
 
-export default ProtectedRoute;
+export default ProtectedRoute

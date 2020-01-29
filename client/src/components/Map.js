@@ -1,35 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import ReactMapGL, { NavigationControl, Marker } from 'react-map-gl';
-import { withStyles } from '@material-ui/core/styles';
+import React, { useState, useEffect } from 'react'
+import ReactMapGL, { NavigationControl, Marker } from 'react-map-gl'
+import { withStyles } from '@material-ui/core/styles'
 // import Button from "@material-ui/core/Button";
 // import Typography from "@material-ui/core/Typography";
 // import DeleteIcon from "@material-ui/icons/DeleteTwoTone";
 
-import PinIcon from './PinIcon';
+import PinIcon from './PinIcon'
 
 const INITIAL_VIEWPORT = {
   latitude: 48.735443,
   longitude: 2.295592,
   zoom: 15
-};
+}
 
 const Map = ({ classes }) => {
-  const [viewport, setViewport] = useState(INITIAL_VIEWPORT);
-  const [userPosition, setUserPosition] = useState(null);
+  const [viewport, setViewport] = useState(INITIAL_VIEWPORT)
+  const [userPosition, setUserPosition] = useState(null)
 
   useEffect(() => {
-    getUserPosition();
-  }, []);
+    getUserPosition()
+  }, [])
 
   const getUserPosition = () => {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(position => {
-        const { latitude, longitude } = position.coords;
-        setViewport({ ...viewport, latitude, longitude });
-        setUserPosition({ latitude, longitude });
-      });
+        const { latitude, longitude } = position.coords
+        setViewport({ ...viewport, latitude, longitude })
+        setUserPosition({ latitude, longitude })
+      })
     }
-  };
+  }
 
   return (
     <div className={classes.root}>
@@ -60,8 +60,8 @@ const Map = ({ classes }) => {
         )}
       </ReactMapGL>
     </div>
-  );
-};
+  )
+}
 
 const styles = {
   root: {
@@ -92,6 +92,6 @@ const styles = {
     justifyContent: 'center',
     flexDirection: 'column'
   }
-};
+}
 
-export default withStyles(styles)(Map);
+export default withStyles(styles)(Map)

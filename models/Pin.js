@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const PinSchema = new mongoose.Schema(
   {
@@ -28,6 +28,6 @@ const PinSchema = new mongoose.Schema(
   {
     timestamps: true
   }
-);
+)
 
-module.exports = mongoose.model('Pin', PinSchema);
+module.exports = mongoose.model('Pin', PinSchema)

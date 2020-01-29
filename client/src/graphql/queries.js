@@ -7,4 +7,4 @@ export const ME_QUERY = `
       picture
     }
   }
-`;
+`

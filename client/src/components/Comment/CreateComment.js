@@ -1,5 +1,5 @@
-import React from 'react';
-import { withStyles } from '@material-ui/core';
+import React from 'react'
+import { withStyles } from '@material-ui/core'
 // import InputBase from "@material-ui/core/InputBase";
 // import IconButton from "@material-ui/core/IconButton";
 // import ClearIcon from "@material-ui/icons/Clear";
@@ -7,8 +7,8 @@ import { withStyles } from '@material-ui/core';
 // import Divider from "@material-ui/core/Divider";
 
 const CreateComment = ({ classes }) => {
-  return <div>CreateComment</div>;
-};
+  return <div>CreateComment</div>
+}
 
 const styles = theme => ({
   form: {
@@ -27,6 +27,6 @@ const styles = theme => ({
     padding: 0,
     color: theme.palette.secondary.dark
   }
-});
+})
 
-export default withStyles(styles)(CreateComment);
+export default withStyles(styles)(CreateComment)

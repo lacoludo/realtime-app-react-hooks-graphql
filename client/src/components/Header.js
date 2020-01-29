@@ -1,16 +1,16 @@
-import React, { useContext } from 'react';
-import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import MapIcon from '@material-ui/icons/Map';
-import Typography from '@material-ui/core/Typography';
+import React, { useContext } from 'react'
+import { withStyles } from '@material-ui/core/styles'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import MapIcon from '@material-ui/icons/Map'
+import Typography from '@material-ui/core/Typography'
 
-import Context from '../context';
-import Signout from '../components/Auth/Signout';
+import Context from '../context'
+import Signout from '../components/Auth/Signout'
 
 const Header = ({ classes }) => {
-  const { state } = useContext(Context);
-  const { currentUser } = state;
+  const { state } = useContext(Context)
+  const { currentUser } = state
 
   return (
     <div className={classes.root}>
@@ -41,8 +41,8 @@ const Header = ({ classes }) => {
         </Toolbar>
       </AppBar>
     </div>
-  );
-};
+  )
+}
 
 const styles = theme => ({
   root: {
@@ -66,6 +66,6 @@ const styles = theme => ({
     borderRadius: '90%',
     marginRight: theme.spacing.unit * 2
   }
-});
+})
 
-export default withStyles(styles)(Header);
+export default withStyles(styles)(Header)
