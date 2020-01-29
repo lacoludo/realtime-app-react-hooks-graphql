@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import Header from '../components/Header';
-import Map from '../components/Map';
-import withRoot from '../withRoot';
+import Header from '../components/Header'
+import Map from '../components/Map'
+import withRoot from '../withRoot'
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
       <Header />
       <Map />
     </>
-  );
-};
+  )
+}
 
-export default withRoot(App);
+export default withRoot(App)

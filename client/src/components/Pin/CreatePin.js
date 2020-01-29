@@ -1,5 +1,5 @@
-import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import React from 'react'
+import { withStyles } from '@material-ui/core/styles'
 // import TextField from "@material-ui/core/TextField";
 // import Typography from "@material-ui/core/Typography";
 // import Button from "@material-ui/core/Button";
@@ -9,8 +9,8 @@ import { withStyles } from '@material-ui/core/styles';
 // import SaveIcon from "@material-ui/icons/SaveTwoTone";
 
 const CreatePin = ({ classes }) => {
-  return <div>CreatePin</div>;
-};
+  return <div>CreatePin</div>
+}
 
 const styles = theme => ({
   form: {
@@ -50,6 +50,6 @@ const styles = theme => ({
     marginRight: theme.spacing.unit,
     marginLeft: 0
   }
-});
+})
 
-export default withStyles(styles)(CreatePin);
+export default withStyles(styles)(CreatePin)
