@@ -17,6 +17,8 @@ export const useClient = () => {
   }, [])
 
   return new GraphQLClient(BASE_URL, {
-    headers: { authorization: idToken }
+    headers: {
+      authorization: idToken
+    }
   })
 }

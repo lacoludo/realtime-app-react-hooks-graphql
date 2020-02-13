@@ -25,7 +25,9 @@ const CreatePin = ({ classes }) => {
     setTitle('')
     setImage('')
     setContent('')
-    dispatch({ type: 'DELETE_DRAFT' })
+    dispatch({
+      type: 'DELETE_DRAFT'
+    })
   }
 
   const handleImageUpload = async () => {
@@ -46,10 +48,21 @@ const CreatePin = ({ classes }) => {
       setSubmitting(true)
       const url = await handleImageUpload()
       const { latitude, longitude } = state.draft
-      const variables = { title, image: url, content, latitude, longitude }
+      const variables = {
+        title,
+        image: url,
+        content,
+        latitude,
+        longitude
+      }
       const { createPin } = await client.request(CREATE_PIN_MUTATION, variables)
-      console.log('Pin created', { createPin })
-      dispatch({ type: 'CREATE_PIN', payload: createPin })
+      console.log('Pin created', {
+        createPin
+      })
+      dispatch({
+        type: 'CREATE_PIN',
+        payload: createPin
+      })
       handleDeleteDraft()
     } catch (err) {
       setSubmitting(false)
@@ -84,7 +97,9 @@ const CreatePin = ({ classes }) => {
         />
         <label htmlFor="image">
           <Button
-            style={{ color: image && 'green' }}
+            style={{
+              color: image && 'green'
+            }}
             component="span"
             size="small"
             className={classes.button}

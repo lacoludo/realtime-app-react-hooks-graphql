@@ -36,26 +36,41 @@ const Map = ({ classes }) => {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(position => {
         const { latitude, longitude } = position.coords
-        setViewport({ ...viewport, latitude, longitude })
-        setUserPosition({ latitude, longitude })
+        setViewport({
+          ...viewport,
+          latitude,
+          longitude
+        })
+        setUserPosition({
+          latitude,
+          longitude
+        })
       })
     }
   }
 
   const getPins = async () => {
     const { getPins } = await client.request(GET_PINS_QUERY)
-    dispatch({ type: 'GET_PINS', payload: getPins })
+    dispatch({
+      type: 'GET_PINS',
+      payload: getPins
+    })
   }
 
   const handleMapClick = ({ lngLat, leftButton }) => {
     if (!leftButton) return
     if (!state.draft) {
-      dispatch({ type: 'CREATE_DRAFT' })
+      dispatch({
+        type: 'CREATE_DRAFT'
+      })
     }
     const [longitude, latitude] = lngLat
     dispatch({
       type: 'UPDATE_DRAFT_LOCATION',
-      payload: { longitude, latitude }
+      payload: {
+        longitude,
+        latitude
+      }
     })
   }
 
@@ -67,15 +82,23 @@ const Map = ({ classes }) => {
 
   const handleSelectPin = pin => {
     setPopup(pin)
-    dispatch({ type: 'SET_PIN', payload: pin })
+    dispatch({
+      type: 'SET_PIN',
+      payload: pin
+    })
   }
 
   const isAuthUser = () => state.currentUser._id === popup.author._id
 
   const handleDeletePin = async pin => {
-    const variables = { pinId: pin._id }
+    const variables = {
+      pinId: pin._id
+    }
     const { deletePin } = await client.request(DELETE_PIN_MUTATION, variables)
-    dispatch({ type: 'DELETE_PIN', payload: deletePin })
+    dispatch({
+      type: 'DELETE_PIN',
+      payload: deletePin
+    })
     setPopup(null)
   }
 
