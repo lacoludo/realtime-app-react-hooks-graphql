@@ -15,7 +15,9 @@ const Login = ({ classes }) => {
     try {
       const idToken = googleUser.getAuthResponse().id_token
       const client = new GraphQLClient(BASE_URL, {
-        headers: { authorization: idToken }
+        headers: {
+          authorization: idToken
+        }
       })
       const { me } = await client.request(ME_QUERY)
       dispatch({
@@ -42,7 +44,9 @@ const Login = ({ classes }) => {
         variant="h3"
         gutterBottom
         noWrap
-        style={{ color: 'rgb(66, 133, 244)' }}
+        style={{
+          color: 'rgb(66, 133, 244)'
+        }}
       >
         Welcome
       </Typography>
